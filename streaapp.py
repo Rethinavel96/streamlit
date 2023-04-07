@@ -4,7 +4,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.preprocessing import LabelEncoder
 
-df=pd.read_csv('iris.csv')
+dl=slt.file_uploader('iris.csv')
+
+df=pd.read_csv(dl)
+
+
 print(df.head(4))
 print(df.isna().sum())
 df.drop('Id',inplace=True,axis=1)
